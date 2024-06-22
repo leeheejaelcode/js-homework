@@ -20,6 +20,7 @@ const user = {
 4. 로그인 버튼을 클릭시 조건처리
 */
 
+const loginForm = document.querySelector(".login-form");
 const email = document.querySelector("#userEmail");
 const password = document.querySelector("#userPassword");
 const loginButton = document.querySelector(".btn-login");
@@ -38,6 +39,20 @@ function checkInput(target, isValid, className) {
     return true;
   }
 }
+// 이벤트 위임을 통한 코드도 작성해보았습니다
+
+// loginForm.addEventListener("input", (e) => {
+//   const target = e.target;
+//   const value = target.value;
+
+//   if (target.id === "userEmail") {
+//     const em = emailReg(value);
+//     isEmail = checkInput(target, em, "is--invalid");
+//   } else if (target.id === "userPassword") {
+//     const pw = pwReg(value);
+//     isPassword = checkInput(target, pw, "is--invalid");
+//   }
+// });
 
 email.addEventListener("input", (e) => {
   value = e.target.value;
