@@ -21,7 +21,6 @@ const poster = document.querySelector(".visual > div > img"); // poster 이미�
 const nickName = document.querySelector(".nickName"); // nickName
 
 function handleClick(e) {
-  e.preventDefault();
   const li = e.target.closest("li"); // 내가 클릭한 li
   const index = li.dataset.index - 1; // data-index 값을 가져오고 그 값이 1부터 시작하기 때문에 -1을 해주었습니다.
 
