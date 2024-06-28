@@ -15,7 +15,7 @@ const clod = new AudioPlayer("./assets/audio/clod.m4a");
 const gale = new AudioPlayer("./assets/audio/gale.m4a");
 
 const elemental = [ember, wade, clod, gale];
-// 오디오 파일을 배열로 만듦
+// 오디오 파일을 배열로 만들었습니다.
 
 const typeOf = (data) =>
   Object.prototype.toString.call(data).slice(8, -1).toLowerCase();
