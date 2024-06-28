@@ -5,6 +5,8 @@
 4. 텍스트 변경
 5. 함수 분리
 */
+
+// 오디오 파일 import
 import AudioPlayer from "./audio.js";
 
 const ember = new AudioPlayer("./assets/audio/ember.m4a");
@@ -13,6 +15,8 @@ const clod = new AudioPlayer("./assets/audio/clod.m4a");
 const gale = new AudioPlayer("./assets/audio/gale.m4a");
 
 const elemental = [ember, wade, clod, gale];
+// 오디오 파일을 배열로 만듦
+
 const typeOf = (data) =>
   Object.prototype.toString.call(data).slice(8, -1).toLowerCase();
 
@@ -55,8 +59,7 @@ function setImage(node, data) {
   if (typeOf(node) == "string") {
     node = document.querySelector(node);
   }
-
-  node.src = `./assets/${data.name}.jpeg`;
+  node.src = `./assets/${data.name.toLowerCase()}.jpeg`;
   node.alt = data.alt;
 }
 
